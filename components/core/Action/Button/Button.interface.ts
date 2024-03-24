@@ -5,4 +5,5 @@ export interface ButtonProp {
 	onClick?: () => void;
 	type?: "button" | "submit" | "reset";
 	icon: ReactElement;
+	className: string;
 }
