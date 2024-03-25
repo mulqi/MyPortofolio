@@ -1,26 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useIsOPen, useIsClicked } from "./hooks";
 
 export const Navigation = () => {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isClicked, setIsClicked] = useState(false);
-
-	const toggleMenu = () => {
-		setIsOpen(!isOpen);
-		setIsClicked(true);
-		setTimeout(() => {
-			setIsClicked(false);
-		}, 500);
-	};
-
-	const closeMenu = () => {
-		setIsOpen(false);
-		setIsClicked(true);
-		setTimeout(() => {
-			setIsClicked(false);
-		}, 500);
-	};
+	const { isOpen, toggleMenu, closeMenu } = useIsOPen();
+	const { isClicked, handleClickAnimation } = useIsClicked();
 
 	const List = () => {
 		return (
@@ -38,6 +22,10 @@ export const Navigation = () => {
 		);
 	};
 
+	const styleAside = `fixed bg-zinc-700 bg-opacity-90 inset-y-0 left-0 z-50 w-40 lg:w-8 shadow-lg transform transition-transform duration-500 ${
+		isOpen ? "translate-x-0" : "-translate-x-full"
+	} lg:hidden`;
+
 	const style =
 		"ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200 w-[60px]";
 
@@ -45,7 +33,7 @@ export const Navigation = () => {
 		<>
 			<nav className="lg:p-2 lg:pr-[96px] fixed right-4">
 				<button
-					onClick={toggleMenu}
+					onClick={() => (toggleMenu(), handleClickAnimation())}
 					className={`lg:hidden text-2xl focus:outline-none pt-1 ${
 						isClicked ? "animate-spin duration-700" : ""
 					}`}
@@ -53,12 +41,7 @@ export const Navigation = () => {
 					{isOpen ? "✖" : "☰"}
 				</button>
 			</nav>
-			<aside
-				id="aside"
-				className={`fixed bg-zinc-700 bg-opacity-90 inset-y-0 left-0 z-50 w-40 lg:w-8 shadow-lg transform transition-transform duration-500 ${
-					isOpen ? "translate-x-0" : "-translate-x-full"
-				} lg:hidden`}
-			>
+			<aside id="aside" className={styleAside}>
 				<div className="p-5 h-full">
 					<ul className="flex flex-col space-y-4 h-full justify-center">
 						{List()}

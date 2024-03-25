@@ -2,14 +2,18 @@ export const RecentProject = {
 	"Recent Project": [
 		{
 			id: 1,
-			name: "MedicGo",
+			name: "MyPortofolio",
 		},
 		{
 			id: 2,
-			name: "MeserApp",
+			name: "MedicGo",
 		},
 		{
 			id: 3,
+			name: "MeserApp",
+		},
+		{
+			id: 4,
 			name: "BaFood",
 		},
 	],

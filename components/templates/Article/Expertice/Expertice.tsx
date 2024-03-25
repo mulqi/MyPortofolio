@@ -9,17 +9,18 @@ export const Expertise = () => {
 		<div>
 			{Object.values(Data.Expertise).map((posts, idx) => (
 				<Tab.Panel key={idx} className="bg-transparent p-3">
-					<ul>
+					<ul className="md:flex md:justify-center md:flex-wrap">
 						{posts.map((post) => (
-							<li
-								key={post.id}
-								className="flex p-6 justify-start md:justify-center"
-							>
-								<a href={post.url} target="_blank" className="flex gap-2">
+							<li key={post.id} className="p-6">
+								<a
+									href={post.url}
+									target="_blank"
+									className="flex flex-wrap justify-start gap-2"
+								>
 									<Image
 										alt={post.name}
 										src={post.image}
-										className="w-[24px]"
+										className="w-[24px] "
 									/>
 									<h3 className="text-lg font-medium">{post.name}</h3>
 								</a>
