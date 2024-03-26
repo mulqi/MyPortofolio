@@ -1,4 +1,4 @@
-import { About, Jumbotron, Navbar, Article } from "@/components";
+import { About, Jumbotron, Navbar, Article, Contact } from "@/components";
 import { Fragment } from "react";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
 			<Jumbotron />
 			<About />
 			<Article />
+			<Contact />
 		</Fragment>
 	);
 }

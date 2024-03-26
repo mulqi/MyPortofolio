@@ -2,7 +2,7 @@
 
 import { Tab } from "@headlessui/react";
 import { Data } from "@/data";
-import { Expertise, RecentProject } from ".";
+import { Certificate, Expertise, RecentProject } from ".";
 
 function classNames(...classes: any) {
 	return classes.filter(Boolean).join(" ");
@@ -34,6 +34,7 @@ export const Article = () => {
 					<Tab.Panels className="mt-2">
 						<RecentProject />
 						<Expertise />
+						<Certificate />
 					</Tab.Panels>
 				</Tab.Group>
 			</div>

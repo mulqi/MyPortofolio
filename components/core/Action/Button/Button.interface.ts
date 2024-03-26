@@ -6,4 +6,5 @@ export interface ButtonProp {
 	type?: "button" | "submit" | "reset";
 	icon: ReactElement;
 	className: string;
+	classnameDiv: string;
 }

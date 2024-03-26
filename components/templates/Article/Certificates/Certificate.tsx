@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 import { useEffect } from "react";
 
-export const RecentProject = () => {
+export const Certificate = () => {
 	useEffect(() => {
 		Aos.init();
 		Aos.refresh;
@@ -16,20 +16,21 @@ export const RecentProject = () => {
 
 	return (
 		<div>
-			{Object.values(Data.RecentProject).map((posts, idx) => (
+			{Object.values(Data.Certificate).map((posts, idx) => (
 				<Tab.Panel key={idx} className="bg-transparent p-3">
-					<ul className="w-full flex flex-wrap justify-center gap-14">
+					<ul className="w-full p-3 flex flex-wrap justify-center gap-8">
 						{posts.map((post) => (
-							<li key={post.id} className="w-[600px]">
+							<li key={post.id}>
 								<Image
 									src={post.image}
-									alt="image"
-									className="w-[600px] rounded-2xl"
-									data-aos="zoom-in"
-									data-aos-duration="1500"
+									alt={post.name}
+									className="w-[400px]"
+									data-aos="flip-right"
+									data-aos-duration="1000"
+									data-aos-offset="300"
+									data-aos-easing="ease-in-sine"
 								/>
-								<h3 className="text-lg font-medium p-1">{post.name}</h3>
-								<h2 className="text-sm p-4">{post.title}</h2>
+								<h3 className="text-sm font-bold p-2">{post.title}</h3>
 							</li>
 						))}
 					</ul>

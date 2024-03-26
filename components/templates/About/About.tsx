@@ -20,6 +20,11 @@ export const About = () => {
 					make me a valuable asset to any team.
 				</p>
 			</section>
+			<Image
+				src={Icon.Light}
+				alt="lighting"
+				className="absolute left-[290px] md:left-[560px] lg:left-[700px] xl:left-[400px]"
+			/>
 			<aside>
 				<Image src={Icon.AboutLogo} alt="aboutLogo" />
 			</aside>

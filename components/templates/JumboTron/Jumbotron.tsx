@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { Icon, Button, Iconoir } from "@/components/core";
+import { useHome } from "@/hooks";
 
 export const Jumbotron = () => {
+	const { onDownloadFile } = useHome();
 	return (
 		<main id="Home" className="flex flex-wrap md:justify-around">
 			<section className="w-full md:w-[200px] md:pt-[75px] md:pl-[34px] lg:pt-[90px] lg:pl-[40px] pl-[16px] text-center">
@@ -20,7 +24,9 @@ export const Jumbotron = () => {
 					title="Download CV"
 					icon={<Iconoir name="CloudDownload" className="inline ml-3" />}
 					type="button"
-					className="pl-[89px]"
+					className="text-white w-[227px] h-[47px] hover:opacity-75 bg-[#393E46] rounded-[50px] font-bold"
+					classnameDiv="pl-[89px]"
+					onClick={onDownloadFile}
 				/>
 			</section>
 			<aside className="pt-11">
