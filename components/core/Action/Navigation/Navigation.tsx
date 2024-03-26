@@ -10,13 +10,19 @@ export const Navigation = () => {
 		return (
 			<>
 				<li className={style}>
-					<Link href="#Home">Home</Link>
+					<Link href="#Home" target="_self">
+						Home
+					</Link>
 				</li>
 				<li className={style}>
-					<Link href="#About">About</Link>
+					<Link href="#About" target="_self">
+						About
+					</Link>
 				</li>
 				<li className={style}>
-					<Link href="#Contact">Contact</Link>
+					<Link href="#Contact" target="_self">
+						Contact
+					</Link>
 				</li>
 			</>
 		);
