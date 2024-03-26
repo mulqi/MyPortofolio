@@ -10,17 +10,17 @@ export const Navigation = () => {
 		return (
 			<>
 				<li className={style}>
-					<Link href="#Home" target="_self">
+					<Link href="#Home" target="_top">
 						Home
 					</Link>
 				</li>
 				<li className={style}>
-					<Link href="#About" target="_self">
+					<Link href="#About" target="_top">
 						About
 					</Link>
 				</li>
 				<li className={style}>
-					<Link href="#Contact" target="_self">
+					<Link href="#Contact" target="_top">
 						Contact
 					</Link>
 				</li>
