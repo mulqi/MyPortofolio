@@ -1,4 +1,11 @@
-import { About, Jumbotron, Navbar, Article, Contact } from "@/components";
+import {
+	About,
+	Jumbotron,
+	Navbar,
+	Article,
+	Contact,
+	Footer,
+} from "@/components";
 import { Fragment } from "react";
 
 export default function Home() {
@@ -9,6 +16,7 @@ export default function Home() {
 			<About />
 			<Article />
 			<Contact />
+			<Footer />
 		</Fragment>
 	);
 }

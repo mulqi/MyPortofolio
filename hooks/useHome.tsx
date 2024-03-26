@@ -1,4 +1,24 @@
+import { Iconoir } from "@/components";
+
 export const useHome = () => {
+	const Profile = [
+		{
+			id: 1,
+			image: <Iconoir name="Instagram" />,
+			link: "https://www.instagram.com/mulqialkautsar/",
+		},
+		{
+			id: 2,
+			image: <Iconoir name="Github" />,
+			link: "https://github.com/mulqi",
+		},
+		{
+			id: 3,
+			image: <Iconoir name="Facebook" />,
+			link: "https://www.facebook.com/oesman.ondeway.3/",
+		},
+	];
+
 	const onDownloadFile = async () => {
 		const response = await fetch("/api/file");
 		const blob = await response.blob();
@@ -11,5 +31,6 @@ export const useHome = () => {
 	};
 	return {
 		onDownloadFile,
+		Profile,
 	};
 };
