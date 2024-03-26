@@ -7,7 +7,7 @@ import { useHome } from "@/hooks";
 export const Jumbotron = () => {
 	const { onDownloadFile } = useHome();
 	return (
-		<main id="Home" className="flex flex-wrap md:justify-around">
+		<main id="Home" className="flex flex-wrap justify-center md:justify-around">
 			<section className="w-full md:w-[200px] md:pt-[75px] md:pl-[34px] lg:pt-[90px] lg:pl-[40px] pl-[16px] text-center">
 				<Image
 					src={Icon.Arrow}
@@ -29,7 +29,7 @@ export const Jumbotron = () => {
 					onClick={onDownloadFile}
 				/>
 			</section>
-			<aside className="pt-11">
+			<aside>
 				<Image
 					src={Icon.AsideLogo}
 					alt="logo"
