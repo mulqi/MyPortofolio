@@ -14,7 +14,7 @@ export const Footer = () => {
 					</div>
 				))}
 			</ul>
-			<h1 className="mt-9">
+			<h1 className="m-9">
 				Mulqy Alkautsar &copy; {new Date().getFullYear()} All rights reserved
 			</h1>
 		</footer>

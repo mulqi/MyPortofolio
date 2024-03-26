@@ -7,23 +7,23 @@ export const RecentProject = {
 		},
 		{
 			id: 2,
+			image: require("@/assets/recentProject/shopcom.png"),
+			name: "Shopcommerce",
+			title: "create a ecommerce website using nextjs as a frontend.",
+		},
+		{
+			id: 3,
 			image: require("@/assets/recentProject/boba.jpg"),
-			name: "Bafood",
+			name: "BaFood",
 			title:
 				"create a food ecommerce website using javascript native html and bootstrap.",
 		},
 		{
-			id: 3,
-			image: require("@/assets/recentProject/shopcom.png"),
-			title: "create a ecommerce website using nextjs react as the frontend.",
-			name: "Shopcommerce",
-		},
-		{
 			id: 4,
 			image: require("@/assets/recentProject/medicgo.png"),
+			name: "MedicGO",
 			title:
 				"Pharmacy website uses React, Typescript and also Firebase as backend.",
-			name: "MedicGO",
 		},
 	],
 };
