@@ -33,7 +33,7 @@ export const Jumbotron = () => {
 				<Image
 					src={Icon.AsideLogo}
 					alt="logo"
-					className="w-full md:w-[250px] lg:w-[450px]"
+					className="w-full md:w-[250px] lg:w-[450px] pt-5"
 				/>
 			</aside>
 		</main>
