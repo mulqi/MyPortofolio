@@ -29,11 +29,11 @@ export const Jumbotron = () => {
 					onClick={onDownloadFile}
 				/>
 			</section>
-			<aside>
+			<aside className="mt-[50px] md:mt-0">
 				<Image
 					src={Icon.AsideLogo}
 					alt="logo"
-					className="w-full md:w-[250px] lg:w-[450px] pt-5"
+					className="w-full md:w-[250px] lg:w-[450px]"
 				/>
 			</aside>
 		</main>
