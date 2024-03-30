@@ -1,22 +1,21 @@
 import {
 	About,
-	Jumbotron,
-	Navbar,
 	Article,
 	Contact,
 	Footer,
+	Jumbotron,
+	Navbar,
 } from "@/components";
-import { Fragment } from "react";
 
 export default function Home() {
 	return (
-		<Fragment>
+		<>
 			<Navbar />
 			<Jumbotron />
 			<About />
 			<Article />
 			<Contact />
 			<Footer />
-		</Fragment>
+		</>
 	);
 }
